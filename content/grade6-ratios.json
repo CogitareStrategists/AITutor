@@ -1,0 +1,538 @@
+{
+  "id": "g6-ratios",
+  "grade": 6,
+  "title": "Ratio and Proportion",
+  "boards": ["ICSE", "STATE"],
+  "misconceptions": [
+    {
+      "id": "order_reversed",
+      "name": "Writes the ratio in the wrong order",
+      "feedback": "You have the right numbers, but in the opposite order. In a ratio, the quantity named first in the question comes first.",
+      "next_action": "Read the question again, find which quantity is named first, and put it on the left of the colon.",
+      "review_objective": "g6-ratios.lu1.lo1"
+    },
+    {
+      "id": "part_whole",
+      "name": "Compares a part with the total instead of with the other part",
+      "feedback": "It looks like you compared one group with the total. This question compares one group with the other group.",
+      "next_action": "Find the two groups the question names, and use only those two numbers.",
+      "review_objective": "g6-ratios.lu1.lo1"
+    },
+    {
+      "id": "units_not_matched",
+      "name": "Compares quantities in different units",
+      "feedback": "The two quantities are in different units, so they can't be compared directly yet.",
+      "next_action": "Change both quantities to the same unit first, then write the ratio.",
+      "review_objective": "g6-ratios.lu1.lo2"
+    },
+    {
+      "id": "not_simplest",
+      "name": "Gives an equivalent ratio that is not in simplest form",
+      "feedback": "Your ratio has the right value, but it can still be simplified. Both terms share a common factor.",
+      "next_action": "Divide both terms by their HCF so they have no common factor other than 1.",
+      "review_objective": "g6-ratios.lu2.lo1"
+    },
+    {
+      "id": "additive_scaling",
+      "name": "Adds the same number to both terms instead of multiplying",
+      "feedback": "It looks like you added the same amount to both terms. Equivalent ratios come from multiplying or dividing both terms by the same number.",
+      "next_action": "Work out what one term was multiplied by, then multiply the other term by the same number.",
+      "review_objective": "g6-ratios.lu2.lo2"
+    },
+    {
+      "id": "unitary_inverse",
+      "name": "Divides or multiplies by the wrong quantity in the unitary method",
+      "feedback": "The steps are mixed up: the answer came from dividing by the wrong quantity.",
+      "next_action": "First find the value of one item by dividing the total by the number of items, then multiply.",
+      "review_objective": "g6-ratios.lu4.lo1"
+    }
+  ],
+  "units": [
+    {
+      "id": "g6-ratios.lu1",
+      "title": "What a ratio is",
+      "objectives": [
+        {
+          "id": "g6-ratios.lu1.lo1",
+          "title": "Compare two quantities by division and write the ratio in the right order",
+          "video_url": null,
+          "questions": [
+            {
+              "id": "g6-ratios.lu1.lo1.q1",
+              "uses": ["diagnostic", "cfu"],
+              "format": "fill_blank",
+              "prompt": "A class has 12 girls and 18 boys. What is the ratio of girls to boys, in simplest form?",
+              "answer": { "kind": "ratio", "value": "2:3", "form": "simplest" },
+              "likely_wrong": [
+                { "answer": "3:2", "misconception": "order_reversed" },
+                { "answer": "2:5", "misconception": "part_whole" }
+              ],
+              "hints": [
+                "The question names girls first, so the number of girls goes first: $12 : 18$.",
+                "Divide both terms by their HCF. What is the HCF of 12 and 18?"
+              ],
+              "solution": "Girls to boys is $12 : 18$. The HCF of 12 and 18 is 6, so $12 : 18 = 2 : 3$."
+            },
+            {
+              "id": "g6-ratios.lu1.lo1.q2",
+              "uses": ["cfu"],
+              "format": "fill_blank",
+              "prompt": "A box has 5 red pens and 7 blue pens. Write the ratio of blue pens to red pens.",
+              "answer": { "kind": "ratio", "value": "7:5", "form": "simplest" },
+              "likely_wrong": [
+                { "answer": "5:7", "misconception": "order_reversed" },
+                { "answer": "7:12", "misconception": "part_whole" }
+              ],
+              "hints": [
+                "Which colour does the question name first?",
+                "Blue pens come first, so the ratio starts with 7."
+              ],
+              "solution": "Blue pens to red pens is $7 : 5$. 7 and 5 have no common factor, so it is already in simplest form."
+            },
+            {
+              "id": "g6-ratios.lu1.lo1.q3",
+              "uses": ["lu_quiz"],
+              "format": "fill_blank",
+              "prompt": "Ravi has 20 marbles and Asha has 15 marbles. Find the ratio of Asha's marbles to Ravi's marbles, in simplest form.",
+              "answer": { "kind": "ratio", "value": "3:4", "form": "simplest" },
+              "likely_wrong": [
+                { "answer": "4:3", "misconception": "order_reversed" },
+                { "answer": "3:7", "misconception": "part_whole" }
+              ],
+              "hints": [
+                "Asha is named first, so start with Asha's 15 marbles: $15 : 20$.",
+                "Divide both terms by 5."
+              ],
+              "solution": "Asha to Ravi is $15 : 20$. Dividing both terms by 5 gives $3 : 4$."
+            },
+            {
+              "id": "g6-ratios.lu1.lo1.q4",
+              "uses": ["lu_quiz"],
+              "format": "mcq",
+              "prompt": "Which of these is the ratio of 9 to 4?",
+              "answer": { "kind": "choice", "options": ["9 : 4", "4 : 9", "9 : 13", "13 : 4"], "correct": 0 },
+              "likely_wrong": [
+                { "answer": "1", "misconception": "order_reversed" },
+                { "answer": "2", "misconception": "part_whole" }
+              ],
+              "hints": ["\"The ratio of 9 to 4\" names 9 first, so 9 is the first term."],
+              "solution": "The ratio of 9 to 4 is written $9 : 4$."
+            },
+            {
+              "id": "g6-ratios.lu1.lo1.q5",
+              "uses": ["practice"],
+              "format": "fill_blank",
+              "prompt": "A recipe uses 2 cups of rice for every 3 cups of water. Write the ratio of rice to water.",
+              "answer": { "kind": "ratio", "value": "2:3", "form": "equivalent" },
+              "likely_wrong": [
+                { "answer": "3:2", "misconception": "order_reversed" },
+                { "answer": "2:5", "misconception": "part_whole" }
+              ],
+              "hints": ["Rice is named first, so the cups of rice go first."],
+              "solution": "Rice to water is $2 : 3$."
+            }
+          ]
+        },
+        {
+          "id": "g6-ratios.lu1.lo2",
+          "title": "Change both quantities to the same unit before writing a ratio",
+          "video_url": null,
+          "questions": [
+            {
+              "id": "g6-ratios.lu1.lo2.q1",
+              "uses": ["cfu"],
+              "format": "fill_blank",
+              "prompt": "Find the ratio of 50 paise to ₹ 2, in simplest form.",
+              "answer": { "kind": "ratio", "value": "1:4", "form": "simplest" },
+              "likely_wrong": [{ "answer": "25:1", "misconception": "units_not_matched" }],
+              "hints": [
+                "₹ 1 is 100 paise. How many paise is ₹ 2?",
+                "Now compare $50 : 200$ and simplify."
+              ],
+              "solution": "₹ 2 is 200 paise, so the ratio is $50 : 200$. Dividing both terms by 50 gives $1 : 4$."
+            },
+            {
+              "id": "g6-ratios.lu1.lo2.q2",
+              "uses": ["diagnostic", "cfu"],
+              "format": "fill_blank",
+              "prompt": "Find the ratio of 30 minutes to 2 hours, in simplest form.",
+              "answer": { "kind": "ratio", "value": "1:4", "form": "simplest" },
+              "likely_wrong": [{ "answer": "15:1", "misconception": "units_not_matched" }],
+              "hints": [
+                "1 hour is 60 minutes. How many minutes are in 2 hours?",
+                "Compare $30 : 120$ and simplify."
+              ],
+              "solution": "2 hours is 120 minutes, so the ratio is $30 : 120$. Dividing both terms by 30 gives $1 : 4$."
+            },
+            {
+              "id": "g6-ratios.lu1.lo2.q3",
+              "uses": ["lu_quiz"],
+              "format": "fill_blank",
+              "prompt": "Find the ratio of 600 g to 2 kg, in simplest form.",
+              "answer": { "kind": "ratio", "value": "3:10", "form": "simplest" },
+              "likely_wrong": [{ "answer": "300:1", "misconception": "units_not_matched" }],
+              "hints": [
+                "1 kg is 1000 g. How many grams is 2 kg?",
+                "Compare $600 : 2000$ and divide both terms by their HCF."
+              ],
+              "solution": "2 kg is 2000 g, so the ratio is $600 : 2000$. Dividing both terms by 200 gives $3 : 10$."
+            },
+            {
+              "id": "g6-ratios.lu1.lo2.q4",
+              "uses": ["lu_quiz"],
+              "format": "fill_blank",
+              "prompt": "Find the ratio of 40 cm to 2 m, in simplest form.",
+              "answer": { "kind": "ratio", "value": "1:5", "form": "simplest" },
+              "likely_wrong": [{ "answer": "20:1", "misconception": "units_not_matched" }],
+              "hints": [
+                "1 m is 100 cm. How many centimetres is 2 m?",
+                "Compare $40 : 200$ and simplify."
+              ],
+              "solution": "2 m is 200 cm, so the ratio is $40 : 200$. Dividing both terms by 40 gives $1 : 5$."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g6-ratios.lu2",
+      "title": "Equivalent ratios",
+      "objectives": [
+        {
+          "id": "g6-ratios.lu2.lo1",
+          "title": "Write a ratio in its simplest form",
+          "video_url": null,
+          "questions": [
+            {
+              "id": "g6-ratios.lu2.lo1.q1",
+              "uses": ["diagnostic", "cfu"],
+              "format": "fill_blank",
+              "prompt": "Write $24 : 36$ in simplest form.",
+              "answer": { "kind": "ratio", "value": "2:3", "form": "simplest" },
+              "likely_wrong": [{ "answer": "3:2", "misconception": "order_reversed" }],
+              "hints": [
+                "Find the HCF of 24 and 36.",
+                "The HCF is 12. Divide both terms by 12."
+              ],
+              "solution": "The HCF of 24 and 36 is 12. $24 \\div 12 = 2$ and $36 \\div 12 = 3$, so $24 : 36 = 2 : 3$."
+            },
+            {
+              "id": "g6-ratios.lu2.lo1.q2",
+              "uses": ["cfu"],
+              "format": "fill_blank",
+              "prompt": "Write $45 : 60$ in simplest form.",
+              "answer": { "kind": "ratio", "value": "3:4", "form": "simplest" },
+              "likely_wrong": [{ "answer": "4:3", "misconception": "order_reversed" }],
+              "hints": [
+                "Both numbers are in the 5 times table and the 3 times table.",
+                "The HCF of 45 and 60 is 15."
+              ],
+              "solution": "The HCF of 45 and 60 is 15. $45 \\div 15 = 3$ and $60 \\div 15 = 4$, so $45 : 60 = 3 : 4$."
+            },
+            {
+              "id": "g6-ratios.lu2.lo1.q3",
+              "uses": ["lu_quiz"],
+              "format": "fill_blank",
+              "prompt": "Write $56 : 42$ in simplest form.",
+              "answer": { "kind": "ratio", "value": "4:3", "form": "simplest" },
+              "likely_wrong": [{ "answer": "3:4", "misconception": "order_reversed" }],
+              "hints": [
+                "Both numbers are in the 7 times table. Is there a larger common factor?",
+                "The HCF of 56 and 42 is 14."
+              ],
+              "solution": "The HCF of 56 and 42 is 14. $56 \\div 14 = 4$ and $42 \\div 14 = 3$, so $56 : 42 = 4 : 3$."
+            },
+            {
+              "id": "g6-ratios.lu2.lo1.q4",
+              "uses": ["lu_quiz", "practice"],
+              "format": "fill_blank",
+              "prompt": "Write $1.5 : 2$ as a ratio of whole numbers in simplest form.",
+              "answer": { "kind": "ratio", "value": "3:4", "form": "simplest" },
+              "likely_wrong": [{ "answer": "4:3", "misconception": "order_reversed" }],
+              "hints": [
+                "Multiply both terms by 10 to remove the decimal: $15 : 20$.",
+                "Now divide both terms by their HCF."
+              ],
+              "solution": "Multiplying both terms by 10 gives $15 : 20$. Dividing both terms by 5 gives $3 : 4$."
+            }
+          ]
+        },
+        {
+          "id": "g6-ratios.lu2.lo2",
+          "title": "Find equivalent ratios and a missing term",
+          "video_url": null,
+          "questions": [
+            {
+              "id": "g6-ratios.lu2.lo2.q1",
+              "uses": ["diagnostic", "cfu"],
+              "format": "fill_blank",
+              "prompt": "Fill in the blank: $2 : 3 = 8 : ?$",
+              "answer": { "kind": "number", "value": "12" },
+              "likely_wrong": [{ "answer": "9", "misconception": "additive_scaling" }],
+              "hints": [
+                "What do you multiply 2 by to get 8?",
+                "Multiply 3 by the same number."
+              ],
+              "solution": "$2 \\times 4 = 8$, so multiply 3 by 4 too: $3 \\times 4 = 12$. So $2 : 3 = 8 : 12$."
+            },
+            {
+              "id": "g6-ratios.lu2.lo2.q2",
+              "uses": ["cfu"],
+              "format": "fill_blank",
+              "prompt": "Fill in the blank: $5 : 4 = ? : 20$",
+              "answer": { "kind": "number", "value": "25" },
+              "likely_wrong": [{ "answer": "21", "misconception": "additive_scaling" }],
+              "hints": [
+                "What do you multiply 4 by to get 20?",
+                "Multiply 5 by the same number."
+              ],
+              "solution": "$4 \\times 5 = 20$, so multiply 5 by 5 too: $5 \\times 5 = 25$. So $5 : 4 = 25 : 20$."
+            },
+            {
+              "id": "g6-ratios.lu2.lo2.q3",
+              "uses": ["lu_quiz"],
+              "format": "fill_blank",
+              "prompt": "Fill in the blank: $18 : 27 = 2 : ?$",
+              "answer": { "kind": "number", "value": "3" },
+              "likely_wrong": [{ "answer": "11", "misconception": "additive_scaling" }],
+              "hints": [
+                "What do you divide 18 by to get 2?",
+                "Divide 27 by the same number."
+              ],
+              "solution": "$18 \\div 9 = 2$, so divide 27 by 9 too: $27 \\div 9 = 3$. So $18 : 27 = 2 : 3$."
+            },
+            {
+              "id": "g6-ratios.lu2.lo2.q4",
+              "uses": ["lu_quiz"],
+              "format": "true_false",
+              "prompt": "True or false: $3 : 5$ and $9 : 15$ are equivalent ratios.",
+              "answer": { "kind": "choice", "options": ["True", "False"], "correct": 0 },
+              "likely_wrong": [],
+              "hints": ["Is there one number you can multiply both 3 and 5 by to get 9 and 15?"],
+              "solution": "True. Multiplying both terms of $3 : 5$ by 3 gives $9 : 15$."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g6-ratios.lu3",
+      "title": "Proportion",
+      "objectives": [
+        {
+          "id": "g6-ratios.lu3.lo1",
+          "title": "Check whether four numbers are in proportion",
+          "video_url": null,
+          "questions": [
+            {
+              "id": "g6-ratios.lu3.lo1.q1",
+              "uses": ["diagnostic", "cfu"],
+              "format": "true_false",
+              "prompt": "True or false: 3, 5, 12 and 20 are in proportion.",
+              "answer": { "kind": "choice", "options": ["True", "False"], "correct": 0 },
+              "likely_wrong": [],
+              "hints": [
+                "Four numbers are in proportion when $3 : 5 = 12 : 20$.",
+                "Check whether the product of the extremes ($3 \\times 20$) equals the product of the means ($5 \\times 12$)."
+              ],
+              "solution": "True. $3 \\times 20 = 60$ and $5 \\times 12 = 60$, so $3 : 5 = 12 : 20$."
+            },
+            {
+              "id": "g6-ratios.lu3.lo1.q2",
+              "uses": ["cfu"],
+              "format": "true_false",
+              "prompt": "True or false: 4, 6, 10 and 12 are in proportion.",
+              "answer": { "kind": "choice", "options": ["True", "False"], "correct": 1 },
+              "likely_wrong": [],
+              "hints": [
+                "Compare $4 \\times 12$ with $6 \\times 10$.",
+                "If the two products are different, the numbers are not in proportion."
+              ],
+              "solution": "False. $4 \\times 12 = 48$ but $6 \\times 10 = 60$, so $4 : 6$ is not equal to $10 : 12$."
+            },
+            {
+              "id": "g6-ratios.lu3.lo1.q3",
+              "uses": ["lu_quiz"],
+              "format": "true_false",
+              "prompt": "True or false: 2, 7, 6 and 21 are in proportion.",
+              "answer": { "kind": "choice", "options": ["True", "False"], "correct": 0 },
+              "likely_wrong": [],
+              "hints": ["Compare $2 \\times 21$ with $7 \\times 6$."],
+              "solution": "True. $2 \\times 21 = 42$ and $7 \\times 6 = 42$, so $2 : 7 = 6 : 21$."
+            },
+            {
+              "id": "g6-ratios.lu3.lo1.q4",
+              "uses": ["lu_quiz"],
+              "format": "mcq",
+              "prompt": "Which ratio is in proportion with $6 : 8$?",
+              "answer": { "kind": "choice", "options": ["9 : 12", "8 : 10", "12 : 14", "6 : 10"], "correct": 0 },
+              "likely_wrong": [
+                { "answer": "1", "misconception": "additive_scaling" },
+                { "answer": "2", "misconception": "additive_scaling" }
+              ],
+              "hints": [
+                "Write $6 : 8$ in simplest form first.",
+                "$6 : 8 = 3 : 4$. Which option also simplifies to $3 : 4$?"
+              ],
+              "solution": "$6 : 8 = 3 : 4$ and $9 : 12 = 3 : 4$, so $6 : 8$ and $9 : 12$ are in proportion."
+            }
+          ]
+        },
+        {
+          "id": "g6-ratios.lu3.lo2",
+          "title": "Find the missing term of a proportion",
+          "video_url": null,
+          "questions": [
+            {
+              "id": "g6-ratios.lu3.lo2.q1",
+              "uses": ["diagnostic", "cfu"],
+              "format": "fill_blank",
+              "prompt": "4, 6, $x$ and 15 are in proportion. Find $x$.",
+              "answer": { "kind": "number", "value": "10" },
+              "likely_wrong": [{ "answer": "13", "misconception": "additive_scaling" }],
+              "hints": [
+                "Write the proportion: $4 : 6 = x : 15$.",
+                "The product of the extremes equals the product of the means: $4 \\times 15 = 6 \\times x$."
+              ],
+              "solution": "$4 \\times 15 = 6 \\times x$, so $60 = 6x$ and $x = 10$."
+            },
+            {
+              "id": "g6-ratios.lu3.lo2.q2",
+              "uses": ["cfu"],
+              "format": "fill_blank",
+              "prompt": "If $3 : 8 :: 15 : x$, find $x$.",
+              "answer": { "kind": "number", "value": "40" },
+              "likely_wrong": [{ "answer": "20", "misconception": "additive_scaling" }],
+              "hints": [
+                "What do you multiply 3 by to get 15?",
+                "Multiply 8 by the same number."
+              ],
+              "solution": "$3 \\times 5 = 15$, so $x = 8 \\times 5 = 40$."
+            },
+            {
+              "id": "g6-ratios.lu3.lo2.q3",
+              "uses": ["lu_quiz"],
+              "format": "fill_blank",
+              "prompt": "If $5 : x :: 20 : 36$, find $x$.",
+              "answer": { "kind": "number", "value": "9" },
+              "likely_wrong": [{ "answer": "21", "misconception": "additive_scaling" }],
+              "hints": [
+                "The product of the extremes equals the product of the means: $5 \\times 36 = x \\times 20$.",
+                "$5 \\times 36 = 180$. What times 20 makes 180?"
+              ],
+              "solution": "$5 \\times 36 = 20 \\times x$, so $180 = 20x$ and $x = 9$."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g6-ratios.lu4",
+      "title": "Unitary method",
+      "objectives": [
+        {
+          "id": "g6-ratios.lu4.lo1",
+          "title": "Find the value of one item, then of many",
+          "video_url": null,
+          "questions": [
+            {
+              "id": "g6-ratios.lu4.lo1.q1",
+              "uses": ["diagnostic", "cfu"],
+              "format": "fill_blank",
+              "prompt": "6 notebooks cost ₹ 90. What is the cost of 1 notebook, in rupees?",
+              "answer": { "kind": "number", "value": "15", "units": ["₹", "Rs.", "Rs", "rupees"] },
+              "likely_wrong": [{ "answer": "540", "misconception": "unitary_inverse" }],
+              "hints": [
+                "The cost of 1 notebook is less than the cost of 6. Should you multiply or divide?",
+                "Divide ₹ 90 by 6."
+              ],
+              "solution": "Cost of 1 notebook $= 90 \\div 6 = 15$, so ₹ 15."
+            },
+            {
+              "id": "g6-ratios.lu4.lo1.q2",
+              "uses": ["cfu"],
+              "format": "fill_blank",
+              "prompt": "5 pens cost ₹ 60. How much do 8 pens cost, in rupees?",
+              "answer": { "kind": "number", "value": "96", "units": ["₹", "Rs.", "Rs", "rupees"] },
+              "likely_wrong": [{ "answer": "37.5", "misconception": "unitary_inverse" }],
+              "hints": [
+                "First find the cost of 1 pen: $60 \\div 5$.",
+                "1 pen costs ₹ 12. Now multiply by 8."
+              ],
+              "solution": "1 pen costs $60 \\div 5 = 12$ rupees, so 8 pens cost $12 \\times 8 = 96$ rupees."
+            },
+            {
+              "id": "g6-ratios.lu4.lo1.q3",
+              "uses": ["lu_quiz"],
+              "format": "fill_blank",
+              "prompt": "A car travels 150 km on 10 litres of petrol. How far does it travel on 4 litres, in km?",
+              "answer": { "kind": "number", "value": "60", "units": ["km", "kilometres", "kilometers"] },
+              "likely_wrong": [{ "answer": "375", "misconception": "unitary_inverse" }],
+              "hints": [
+                "First find how far the car goes on 1 litre: $150 \\div 10$.",
+                "The car goes 15 km on 1 litre. Now multiply by 4."
+              ],
+              "solution": "On 1 litre the car travels $150 \\div 10 = 15$ km, so on 4 litres it travels $15 \\times 4 = 60$ km."
+            },
+            {
+              "id": "g6-ratios.lu4.lo1.q4",
+              "uses": ["lu_quiz", "practice"],
+              "format": "fill_blank",
+              "prompt": "12 workers are paid ₹ 3600 in total for a day's work. How much are 7 workers paid for a day, in rupees?",
+              "answer": { "kind": "number", "value": "2100", "units": ["₹", "Rs.", "Rs", "rupees"] },
+              "likely_wrong": [],
+              "hints": [
+                "First find what 1 worker is paid: $3600 \\div 12$.",
+                "1 worker is paid ₹ 300. Now multiply by 7."
+              ],
+              "solution": "1 worker is paid $3600 \\div 12 = 300$ rupees, so 7 workers are paid $300 \\times 7 = 2100$ rupees."
+            }
+          ]
+        },
+        {
+          "id": "g6-ratios.lu4.lo2",
+          "title": "Use the unitary method to compare prices",
+          "video_url": null,
+          "questions": [
+            {
+              "id": "g6-ratios.lu4.lo2.q1",
+              "uses": ["cfu"],
+              "format": "mcq",
+              "prompt": "Which is the better buy? Pack A: 3 pencils for ₹ 15. Pack B: 5 pencils for ₹ 30.",
+              "answer": { "kind": "choice", "options": ["Pack A", "Pack B", "Both cost the same per pencil"], "correct": 0 },
+              "likely_wrong": [],
+              "hints": [
+                "Find the cost of 1 pencil in each pack.",
+                "Pack A: $15 \\div 3$. Pack B: $30 \\div 5$."
+              ],
+              "solution": "In Pack A one pencil costs $15 \\div 3 = 5$ rupees. In Pack B it costs $30 \\div 5 = 6$ rupees. Pack A is the better buy."
+            },
+            {
+              "id": "g6-ratios.lu4.lo2.q2",
+              "uses": ["cfu"],
+              "format": "fill_blank",
+              "prompt": "A 5 kg bag of rice costs ₹ 260. What is the price of 1 kg, in rupees?",
+              "answer": { "kind": "number", "value": "52", "units": ["₹", "Rs.", "Rs", "rupees"] },
+              "likely_wrong": [{ "answer": "1300", "misconception": "unitary_inverse" }],
+              "hints": ["The price of 1 kg is less than the price of 5 kg. Divide ₹ 260 by 5."],
+              "solution": "Price of 1 kg $= 260 \\div 5 = 52$, so ₹ 52."
+            },
+            {
+              "id": "g6-ratios.lu4.lo2.q3",
+              "uses": ["diagnostic", "lu_quiz"],
+              "format": "mcq",
+              "prompt": "Shop P sells 4 mangoes for ₹ 100. Shop Q sells 6 mangoes for ₹ 138. Which shop is cheaper per mango?",
+              "answer": { "kind": "choice", "options": ["Shop P", "Shop Q", "Both are the same"], "correct": 1 },
+              "likely_wrong": [],
+              "hints": [
+                "Find the price of 1 mango at each shop.",
+                "Shop P: $100 \\div 4$. Shop Q: $138 \\div 6$."
+              ],
+              "solution": "At Shop P one mango costs $100 \\div 4 = 25$ rupees. At Shop Q it costs $138 \\div 6 = 23$ rupees. Shop Q is cheaper."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
