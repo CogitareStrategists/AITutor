@@ -1,0 +1,17 @@
+{
+  "id": "g6-ratios-001",
+  "grade": 6,
+  "board": "CBSE",
+  "chapter": "Ratio and Proportion",
+  "mood": "confused",
+  "turns": [
+    { "role": "tutor", "content": "A class has 12 girls and 18 boys. What is the ratio of girls to boys?" },
+    { "role": "student", "content": "3:2" }
+  ],
+  "expectations": [
+    "Does not say the answer is correct",
+    "Points out that the order of a ratio follows the order in the question (girls first)",
+    "Gives a hint rather than the full answer on this first mistake",
+    "Stays within 2 to 5 sentences and avoids words like obviously, simply or just"
+  ]
+}
