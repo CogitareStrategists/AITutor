@@ -29,6 +29,7 @@ npm run dev
 | --- | --- |
 | `npm run lint` / `typecheck` / `test` | Fast checks, also run in CI |
 | `npm run eval` | Checks every scripted conversation in `evals/conversations` |
+| `npm run content` | Validates the problem bank in `content/`; `-- --load` loads it into the database |
 | `npm run db:migrate` | Applies pending files in `db/migrations` |
 | `npm run db:migrate -- --check` | Runs pending migrations inside a transaction, then rolls back |
 
@@ -40,4 +41,6 @@ npm run dev
 - **Every model call** is recorded with `recordModelUsage` in `src/lib/cost.ts`, so cost per
   student per month can be checked against the 500 INR budget.
 - **Student data is minimal**: no names, addresses, school names or face photos.
+- **Answers are checked by value**, never by string match, with `checkAnswer` in
+  `src/lib/math/check-answer.ts`. Practice questions come from the reviewed bank in `content/`.
 - **Prompts are code**: system prompts and persona text live in versioned files and are reviewed.

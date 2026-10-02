@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "db:migrate": "tsx scripts/migrate.ts",
-    "eval": "tsx scripts/eval.ts"
+    "eval": "tsx scripts/eval.ts",
+    "content": "tsx scripts/content.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",
